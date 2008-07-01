@@ -1,0 +1,94 @@
+%!TEX TS-program = xelatex 
+%!TEX TS-options = -output-driver="xdvipdfmx -q -E"
+%!TEX encoding = UTF-8 Unicode
+%
+%  enactedcolor
+%
+%  Created by Mark Eli Kalderon on 2008-07-01.
+%
+
+\documentclass[12pt]{article} 
+
+% Definitions
+\newcommand\mykeywords{color, constancy, Noë, enacted perception, perception} 
+\newcommand\myauthor{Mark Eli Kalderon} 
+\newcommand\mytitle{Color and the Problem of Perceptual Presence}
+
+% Packages
+\usepackage{geometry} \geometry{a4paper} 
+\usepackage{url}
+\usepackage{pdfsync} 
+\usepackage{txfonts}
+\usepackage{color}
+\definecolor{gray}{rgb}{0.459,0.438,0.471}
+% \usepackage{setspace}
+% \doublespace % Uncomment for doublespacing if necessary
+% \usepackage{epigraph} % optional
+
+% XeTeX
+\usepackage[cm-default]{fontspec}
+\usepackage{xltxtra,xunicode}
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+\setmainfont{Hoefler Text}
+\setsansfont{Gill Sans}
+\setmonofont{Inconsolata}
+
+% Version Control Information
+\immediate\write18{sh ./vc}
+\input{vc}
+
+
+% Section Formatting
+\usepackage[]{titlesec}
+\titleformat{\section}[hang]{\fontsize{14}{14}\scshape}{\S{\thesection}}{.5em}{}{}
+\titleformat{\subsection}[hang]{\fontsize{12}{12}\scshape}{\S{\thesubsection}}{.5em}{}{}
+\titleformat{\subsubsection}[hang]{\fontsize{12}{12}\scshape}{\S{\thesubsubsection}}{.5em}{}{}
+
+% Headers and Footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\lhead{\thepage}
+\chead{}
+\rhead{\itshape{\nouppercase{\leftmark}}}
+\lfoot{\tiny{Revision: \VCRevision}}
+\cfoot{\tiny{Author: \VCAuthor}}
+\rfoot{\tiny{Date: \VCDateISO}}
+
+% Bibliography
+\usepackage[round]{natbib} 
+
+% Title Information
+\title{\mytitle}% Thanks optional \thanks{}
+\author{\myauthor} 
+% \date{} % Leave blank for no date, comment out for most recent date
+
+% PDF Stuff
+\usepackage[plainpages=false, pdfpagelabels, bookmarksnumbered, backref, pdftitle={\mytitle}, pagebackref, pdfauthor={\myauthor}, pdfkeywords={\mykeywords}, xetex, dvipdfmx, colorlinks=true, citecolor=gray, linkcolor=gray, urlcolor=gray]{hyperref} 
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+% Title Page
+\maketitle
+% \begin{abstract} % optional
+% \end{abstract} 
+\vskip 2em \hrule height 0.4pt \vskip 2em
+% \epigraph{text of epigraph}{\textsc{author of epigraph}} % optional; make sure to uncomment \usepackage{epigraph}
+
+% Layout Settings
+\setlength{\parindent}{1em}
+
+% Main Content
+
+\section{Introduction} \label{sec:introduction} % (fold)
+
+
+
+% section introduction (end)
+
+% Bibligography
+\bibliographystyle{plainnat} 
+\bibliography{Philosophy.bib} 
+
+\end{document}
